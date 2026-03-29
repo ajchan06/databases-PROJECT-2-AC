@@ -429,7 +429,7 @@ Open **http://localhost:3000** in your browser.
 
 ## Video Demonstration
 
-🎥 *[YouTube link to be added after recording]*
+*[https://youtu.be/cm3-aqsBc-4?si=52y0drGywk6-V2lh]*
 
 ---
 
