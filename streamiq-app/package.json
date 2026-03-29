@@ -1,0 +1,17 @@
+{
+  "name": "streamiq-app",
+  "version": "1.0.0",
+  "description": "StreamIQ — Node + Express + MongoDB app for CS3200 Project 2",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
