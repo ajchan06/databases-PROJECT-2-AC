@@ -1,0 +1,100 @@
+[
+  {
+    "_comment": "USERS COLLECTION — Root collection: each document represents a registered user. Embeds: playlists (with nested songs), followedArtists, listeningSnapshots",
+
+    "_docComment": "Example Document 1 — Premium user with playlists and activity",
+    "_id": "ObjectId('665a1b2c3d4e5f6a7b8c9d01')",
+    "username": "melodyfan99",
+    "email": "melodyfan99@email.com",
+    "passwordHash": "$2b$10$xJ3kZvQp8mN2wR5tY7uAeO",
+    "subscriptionTier": "Premium",
+    "dateJoined": "2023-06-15",
+    "playlists": [
+      {
+        "_comment": "Embedded: playlists this user created (absorbs PLAYLIST + PLAYLIST_SONG)",
+        "playlistID": 101,
+        "name": "Chill Vibes",
+        "description": "Relaxing tracks for studying",
+        "visibility": "Public",
+        "createdDate": "2023-07-01",
+        "songs": [
+          {
+            "_comment": "Embedded: songs in this playlist (denormalized from SONG via PLAYLIST_SONG)",
+            "songID": 1001,
+            "title": "Midnight Rain",
+            "artistName": "Aurora Wave",
+            "position": 1,
+            "addedDate": "2023-07-01"
+          },
+          {
+            "songID": 1002,
+            "title": "Golden Hour",
+            "artistName": "Luna Park",
+            "position": 2,
+            "addedDate": "2023-07-02"
+          }
+        ]
+      },
+      {
+        "playlistID": 102,
+        "name": "Workout Mix",
+        "description": null,
+        "visibility": "Private",
+        "createdDate": "2023-08-10",
+        "songs": [
+          {
+            "songID": 1005,
+            "title": "Adrenaline",
+            "artistName": "BeatDrop",
+            "position": 1,
+            "addedDate": "2023-08-10"
+          }
+        ]
+      }
+    ],
+    "followedArtists": [
+      {
+        "_comment": "Embedded: artists this user follows (absorbs USER_ARTIST)",
+        "artistID": 201,
+        "name": "Aurora Wave",
+        "followedDate": "2023-06-20"
+      },
+      {
+        "artistID": 202,
+        "name": "BeatDrop",
+        "followedDate": "2023-09-05"
+      }
+    ],
+    "listeningSnapshots": [
+      {
+        "_comment": "Embedded: monthly listening summaries (absorbs LISTENING_SNAPSHOT)",
+        "snapshotMonth": "2024-01-01",
+        "totalMinutes": 1840,
+        "mostActiveDay": "Saturday"
+      },
+      {
+        "snapshotMonth": "2024-02-01",
+        "totalMinutes": 1205,
+        "mostActiveDay": "Friday"
+      }
+    ]
+  },
+  {
+    "_docComment": "Example Document 2 — Free tier user, no playlists yet",
+    "_id": "ObjectId('665a1b2c3d4e5f6a7b8c9d02')",
+    "username": "newlistener42",
+    "email": "newlistener42@email.com",
+    "passwordHash": "$2b$10$aB7cD9eF0gH1iJ2kL3mN4o",
+    "subscriptionTier": "Free",
+    "dateJoined": "2024-11-20",
+    "playlists": [],
+    "followedArtists": [
+      {
+        "artistID": 201,
+        "name": "Aurora Wave",
+        "followedDate": "2024-11-21"
+      }
+    ],
+    "listeningSnapshots": []
+  }
+]

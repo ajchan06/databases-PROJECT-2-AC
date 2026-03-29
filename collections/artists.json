@@ -1,0 +1,153 @@
+[
+  {
+    "_comment": "ARTISTS COLLECTION — Root collection: each document represents an artist. Embeds: albums (with nested songs, each song has nested songArtists). This is the main catalog collection — all music content lives here.",
+
+    "_docComment": "Example Document 1 — Artist with one LP album containing multiple songs",
+    "_id": "ObjectId('665b2c3d4e5f6a7b8c9d0201')",
+    "name": "Aurora Wave",
+    "country": "Sweden",
+    "primaryGenre": "Indie Pop",
+    "bio": "Swedish indie pop artist known for dreamy synth-driven soundscapes.",
+    "albums": [
+      {
+        "_comment": "Embedded: albums released by this artist (absorbs ALBUM)",
+        "albumID": 301,
+        "title": "Dreamscape",
+        "releaseDate": "2022-03-18",
+        "albumType": "LP",
+        "coverImageURL": "https://images.streamiq.com/albums/dreamscape.jpg",
+        "songs": [
+          {
+            "_comment": "Embedded: songs in this album (absorbs SONG)",
+            "songID": 1001,
+            "title": "Midnight Rain",
+            "duration": 234,
+            "trackNumber": 1,
+            "isExplicit": false,
+            "artists": [
+              {
+                "_comment": "Embedded: credited artists on this song (absorbs SONG_ARTIST). Includes the primary artist + any featured/producer credits",
+                "artistID": 201,
+                "name": "Aurora Wave",
+                "role": "Primary"
+              }
+            ]
+          },
+          {
+            "songID": 1002,
+            "title": "Golden Hour",
+            "duration": 198,
+            "trackNumber": 2,
+            "isExplicit": false,
+            "artists": [
+              {
+                "artistID": 201,
+                "name": "Aurora Wave",
+                "role": "Primary"
+              },
+              {
+                "artistID": 203,
+                "name": "DJ Prism",
+                "role": "Featured"
+              }
+            ]
+          },
+          {
+            "songID": 1003,
+            "title": "Electric Pulse",
+            "duration": 267,
+            "trackNumber": 3,
+            "isExplicit": true,
+            "artists": [
+              {
+                "artistID": 201,
+                "name": "Aurora Wave",
+                "role": "Primary"
+              },
+              {
+                "artistID": 204,
+                "name": "Max Sterling",
+                "role": "Producer"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "albumID": 302,
+        "title": "Echoes",
+        "releaseDate": "2024-01-10",
+        "albumType": "Single",
+        "coverImageURL": "https://images.streamiq.com/albums/echoes.jpg",
+        "songs": [
+          {
+            "songID": 1004,
+            "title": "Echoes",
+            "duration": 210,
+            "trackNumber": 1,
+            "isExplicit": false,
+            "artists": [
+              {
+                "artistID": 201,
+                "name": "Aurora Wave",
+                "role": "Primary"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_docComment": "Example Document 2 — Artist with an EP",
+    "_id": "ObjectId('665b2c3d4e5f6a7b8c9d0202')",
+    "name": "BeatDrop",
+    "country": "United States",
+    "primaryGenre": "Electronic",
+    "bio": "LA-based electronic producer blending hip-hop beats with synth-wave.",
+    "albums": [
+      {
+        "albumID": 303,
+        "title": "Neon Nights",
+        "releaseDate": "2023-09-22",
+        "albumType": "EP",
+        "coverImageURL": "https://images.streamiq.com/albums/neon-nights.jpg",
+        "songs": [
+          {
+            "songID": 1005,
+            "title": "Adrenaline",
+            "duration": 195,
+            "trackNumber": 1,
+            "isExplicit": true,
+            "artists": [
+              {
+                "artistID": 202,
+                "name": "BeatDrop",
+                "role": "Primary"
+              }
+            ]
+          },
+          {
+            "songID": 1006,
+            "title": "Low Frequency",
+            "duration": 248,
+            "trackNumber": 2,
+            "isExplicit": false,
+            "artists": [
+              {
+                "artistID": 202,
+                "name": "BeatDrop",
+                "role": "Primary"
+              },
+              {
+                "artistID": 201,
+                "name": "Aurora Wave",
+                "role": "Featured"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
