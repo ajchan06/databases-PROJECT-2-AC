@@ -435,4 +435,4 @@ Open **http://localhost:3000** in your browser.
 
 ## AI Usage
 
-AI tools (Claude by Anthropic) were used to assist with generating mock data, structuring JSON collection examples, drafting MongoDB queries, and building the Node + Express application.
+AI tools (Claude by Anthropic) were used to assist with generating mock data, structuring JSON collection examples, drafting MongoDB queries, and reformatting README text file for github.
