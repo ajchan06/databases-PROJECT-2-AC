@@ -5,7 +5,7 @@ StreamIQ is a music streaming platform database originally built as a normalized
 
 For the MongoDB adaptation, the 10 normalized relational tables were restructured into **3 root collections** — `users`, `artists`, and `listenHistory` — using embedded documents and denormalization following MongoDB best practices. Playlists, followed artists, and listening snapshots are embedded within user documents. Albums and songs (with credited artist roles) are embedded within artist documents. Listen history remains a separate collection to handle unbounded growth, with denormalized song snapshots for fast reads.
 
-**AI Usage:** AI tools (Claude by Anthropic) were used to assist with generating mock data, structuring JSON collection examples, drafting MongoDB queries, and building the Node + Express application.
+**AI Usage:** AI tools (Claude by Anthropic) were used to assist with generating mock data, structuring JSON collection examples, drafting MongoDB queries, and reformatting the README sections.
 
 ---
 
