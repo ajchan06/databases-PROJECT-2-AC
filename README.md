@@ -1,5 +1,5 @@
 # StreamIQ — Music Streaming Document Database
-### CS3200 Project 2: Design & Implement a Document Database
+Design & Implementation of a Document Database
 
 StreamIQ is a music streaming platform database originally built as a normalized relational database in SQLite3 (Project 1) and adapted here to a document-based MongoDB database (Project 2). The platform models core entities including users, artists, albums, songs, playlists, listen history, and streaming analytics.
 
